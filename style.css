@@ -1,0 +1,101 @@
+* {
+    font-family: 'Lato';
+}
+
+body {
+    background-image: url(./wallpaper.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    background-color: rgba(23, 131, 179, 0.53);
+    color: whitesmoke;
+    padding: 0.4rem 0.9rem;
+    font-weight: normal;
+    font-size: x-large;
+    border-radius: 0.7rem;
+}
+
+#kanban {
+    display: flex;
+    gap: 0.9rem;
+}
+
+#kanban > .column {
+    display: flex;
+    gap: 1rem;
+    height: min-content;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+}
+
+#kanban > .column > h2 {
+    font-size: large;
+}
+
+#kanban > .column > .card {
+    position: relative;
+    width: 250px;
+    background-color: white;
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#kanban > .column > .card > h3 {
+    font-size: medium;
+}
+
+#kanban > .column > .card > h3::before {
+    content: "X";
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.6rem;
+    padding: 0.2rem 0.4rem;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+}
+
+#kanban > .column > .card:hover {
+    background-color: rgba(23, 131, 179, 0.53);
+}
+
+#kanban > .column > .card:hover .tag {
+    color: rgba(23, 131, 179);
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    display: inline-block;
+    color: white;
+    padding: 0.4rem ;
+    border-radius: 50%;
+    width: max-content;
+}
+
+.tag.front {
+    background-color: limegreen;
+}
+.tag.back {
+    background-color: #E47122;
+}
+.tag.device {
+    background-color: #E4D658;
+}
