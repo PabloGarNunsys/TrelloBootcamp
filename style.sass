@@ -1,0 +1,93 @@
+$globalMargin: 0.5rem
+$darkBlue: rgba(23, 131, 179, 0.53)
+
+*
+    font-family: 'Lato'
+    margin: 0
+    padding: 0
+
+main
+    background-image: url(./wallpaper.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100vh
+    padding: 1rem
+
+    h1
+        width: max-content
+        background-color: $darkBlue
+        color: whitesmoke
+        padding: 0.4rem 0.9rem
+        font-weight: 400
+        font-size: x-large
+        border-radius: 0.7rem
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 1rem
+
+    #kanban
+        > .column
+            width: calc(20% - 0.8rem)
+            box-sizing: border-box
+            height: min-content
+            background-color: rgba(255, 255, 255, 0.7)
+            padding: 0.8rem
+            border-radius: 0.7rem
+            float: left
+            margin: 0.4rem
+
+            > h2
+                font-size: large
+                margin: $globalMargin 0
+            
+            > .card
+                position: relative
+                background-color: white
+                padding: 0.8rem
+                border-radius: 0.7rem
+                box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1)
+                cursor: pointer
+                margin-bottom: 0.8rem
+
+                h3 
+                    font-size: medium
+                    margin: $globalMargin 0
+                
+                p 
+                    margin: $globalMargin 0
+                
+                .tag
+                    display: inline-block
+                    color: white
+                    padding: 0.4rem
+                    border-radius: 50%
+                    width: max-content
+                    margin: $globalMargin 0 
+                
+                .tag.front 
+                    background-color: limegreen
+                
+                .tag.back 
+                    background-color: #E47122
+                
+                .tag.device 
+                    background-color: #E4D658
+                
+            > .card:hover
+                background-color: $darkBlue
+
+                .tag 
+                    color: rgba(23, 131, 179)
+                
+                
+            > .card::before 
+                content: "X"
+                position: absolute
+                top: 0
+                right: 0
+                margin: 0.6rem
+                padding: 0.2rem 0.4rem
+                background-color: red
+                border-radius: 50%
+                color: white
+
